@@ -1,0 +1,10 @@
+stages:
+  - build
+
+build project:
+  stage: build
+  image: node:17
+  script:
+    - yarn
+    - yarn test --passWithNoTests
+

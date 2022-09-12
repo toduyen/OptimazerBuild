@@ -1,0 +1,32 @@
+a.active > li > div.MuiBox-root {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.area-restriction-autocomplete > div.css-1qnrw8l-MuiInputBase-root-MuiOutlinedInput-root {
+    height: 42px;
+}
+
+.area-restriction-time input, .area-restriction-time label {
+    font-size: 13px;
+    padding-right: 2px;
+}
+
+.area-restriction-time .MuiInputAdornment-positionEnd {
+    margin-left: 0;
+}
+
+.area-restriction-time .MuiInputAdornment-positionEnd button, .area-restriction-time .MuiAutocomplete-clearIndicator {
+    padding: 2px;
+}
+
+.area-restriction-setting .MuiAutocomplete-inputRoot input {
+    height: 12px;
+}
+
+.time-keeping-noti-autocomplete div.css-1qnrw8l-MuiInputBase-root-MuiOutlinedInput-root {
+    height: 42px;
+}
+
+#autocomplete_start_day, #autocomplete_end_day {
+    padding-top: 0;
+}

@@ -1,0 +1,58 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx" , ".tsx" , ".ts"]
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/require-default-props": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "warn",
+    // check không cho phép các biến không được sử dụng cả các biến Global, Local
+    "no-unused-vars": ["warn",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ],
+    "import/order": "off",
+    "import/prefer-default-export": "off",
+    "no-return-await": "off",
+    "no-plusplus": "off",
+    "no-nested-ternary": "off",
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
+    "no-restricted-syntax": "off",
+    "react/no-this-in-sfc": "off",
+    // check variabels , func không sử dụng trước khi xác định
+    "no-use-before-define": ["warn", {
+      "functions": true,
+      "variables": true
+    }],
+    "no-unneeded-ternary": "off",
+    "react/no-array-index-key": "off",
+    "react/no-unstable-nested-components": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
