@@ -5,8 +5,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-
-
 const commonWebpackConfig = require('./webpack.common');
 
 // eslint-disable-next-line no-shadow
@@ -15,7 +13,7 @@ module.exports = (env) => merge(commonWebpackConfig(env),  {
     output: {
         path: path.resolve(__dirname, '..', 'build'),
         filename: `js/[name].[contenthash:8].bundle.js`,
-        publicPath: '/',
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -34,7 +32,7 @@ module.exports = (env) => merge(commonWebpackConfig(env),  {
             filename: 'css/[name].[contenthash:8].css',
         }),
         new BundleAnalyzerPlugin({
-            analyzerMode: env.analyze ? 'server' : 'disabled',
+            analyzerMode: 'server'
         }),
         new CopyPlugin({
             patterns: [

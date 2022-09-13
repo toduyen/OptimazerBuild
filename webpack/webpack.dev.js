@@ -30,5 +30,7 @@ module.exports = (env) => merge(commonWebpackConfig(env), {
         historyApiFallback: true,
         open: true,
     },
-    output: { publicPath: '/' }
+    output: {
+        publicPath: '/'
+    }
 });
