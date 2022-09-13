@@ -14,7 +14,6 @@ module.exports = (env) => merge(commonWebpackConfig(env), {
             },
             {
                 test: /\.(png|jpeg|gif|jpg)$/i,
-                include: path.join(__dirname, 'assets/images'),
                 use: [
                     {
                         loader: 'file-loader',
