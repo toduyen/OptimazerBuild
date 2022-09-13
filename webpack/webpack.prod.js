@@ -6,7 +6,7 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const commonWebpackConfig = require('./webpack.common');
-
+// Language: javascript
 // eslint-disable-next-line no-shadow
 module.exports = (env) => merge(commonWebpackConfig(env),  {
     mode: 'production',
@@ -32,7 +32,7 @@ module.exports = (env) => merge(commonWebpackConfig(env),  {
             filename: 'css/[name].[contenthash:8].css',
         }),
         new BundleAnalyzerPlugin({
-            analyzerMode: 'server'
+            analyzerMode: 'server',
         }),
         new CopyPlugin({
             patterns: [
@@ -72,4 +72,7 @@ module.exports = (env) => merge(commonWebpackConfig(env),  {
             },
         },
     },
+    // performance: {
+    //     maxEntrypointSize: 800000 //  maximium file build is 800000 (byte)
+    // }
 });
