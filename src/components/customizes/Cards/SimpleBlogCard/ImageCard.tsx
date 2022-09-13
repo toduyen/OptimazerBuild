@@ -1,3 +1,5 @@
+import React from 'react';
+
 import MDBox from "components/bases/MDBox";
 
 export default function ImageCard({ image, width }: { image: string; width: number }) {

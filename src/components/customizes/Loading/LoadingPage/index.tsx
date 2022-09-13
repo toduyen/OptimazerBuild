@@ -1,5 +1,6 @@
 import React from 'react';
 import './LoadingPageStyle.css';
+
 export default function LoadingPage() {
     // @ts-ignore
     return (

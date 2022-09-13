@@ -1,5 +1,5 @@
 const { merge } = require('webpack-merge');
-
+const path = require('path');
 const commonWebpackConfig = require('./webpack.common');
 
 module.exports = (env) => merge(commonWebpackConfig(env), {
@@ -14,6 +14,7 @@ module.exports = (env) => merge(commonWebpackConfig(env), {
             },
             {
                 test: /\.(png|jpeg|gif|jpg)$/i,
+                include: path.join(__dirname, 'assets/images'),
                 use: [
                     {
                         loader: 'file-loader',
@@ -27,6 +28,7 @@ module.exports = (env) => merge(commonWebpackConfig(env), {
         port: 3005,
         hot: true,
         historyApiFallback: true,
-        open: true
+        open: true,
     },
+    output: { publicPath: '/' }
 });

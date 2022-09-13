@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
+const webpack = require("webpack");
 
 module.exports = (env) => ({
     mode: env.WEBPACK_SERVE ? 'development' : 'production',
@@ -64,5 +65,11 @@ module.exports = (env) => ({
         new HtmlWebpackPlugin({
             template: 'public/index.html',
         }),
-    ]
+        new webpack.ProvidePlugin({
+            "React": "react",
+        }),
+    ],
+    // performance: {
+    //     maxEntrypointSize: 800000 //  Khi có 1 file build vượt quá giới hạn này (tính bằng byte) thì sẽ bị warning trên terminal.
+    // }
 });
